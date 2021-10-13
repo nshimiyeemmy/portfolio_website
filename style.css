@@ -17,7 +17,73 @@
 html{
     font-size: 62.5%;
 }
+.mouse_circle,
+.mouse_dot{
+  border-radius: 50%;
+  position: fixed;
+  z-index: 300;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+}
 /*End common styles */
+
+/* mouse circle */
+.mouse_circle{
+  width:6rem;
+  height:6rem;
+  border: 0.1rem solid #c7a622;
+  animation: mouseCircleAnimations 10s infinite linear;
+}
+/* end of mouse circle */
+
+/* these keyframes are to increase the size of the mouse during animation */
+@keyframes mouseCircleAnimations{
+  0%{
+    width: 6rem;
+    height: 6rem;
+  }
+  25%{
+    width: 8rem;
+    height: 8rem;
+  }
+  35%{
+    width: 4rem;
+    height: 4rem;
+  }
+  70%{
+    width: 8rem;
+    height: 8rem;
+  }
+  100%{
+    width: 6rem;
+    height: 6rem;
+  }
+}
+/* mouse dot  */
+.mouse_dot{
+  width:0.5rem ;
+  height:0.5rem ;
+  background-color: #9b0e0e;
+  position: fixed;
+  animation: mouseDotAnimations 10s infinite linear;
+}
+/* these keyframes are to increase the size of the mouse during animation */
+@keyframes mouseDotAnimations{
+  0%{
+    width:.5rem;
+    height:.5rem ;
+  }
+  55%{
+    width:1.5rem;
+    height:1.5rem ;
+  }
+  100%{
+    width:.5rem;
+    height:.5rem ;
+  }
+}
+
+/* end of mouse dot  */
 
 
 /*page background*/
