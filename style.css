@@ -25,6 +25,11 @@ html{
   transform: translate(-50%,-50%);
   opacity: 0;
 }
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /*End common styles */
 
 /* mouse circle */
@@ -36,6 +41,15 @@ html{
 }
 /* end of mouse circle */
 
+/* mouse dot  */
+.mouse_dot{
+  width:0.5rem ;
+  height:0.5rem ;
+  background-color: #9b0e0e;
+  position: fixed;
+  animation: mouseDotAnimations 10s infinite linear;
+}
+/* end of mouse dot  */
 /* these keyframes are to increase the size of the mouse during animation */
 @keyframes mouseCircleAnimations{
   0%{
@@ -59,14 +73,7 @@ html{
     height: 6rem;
   }
 }
-/* mouse dot  */
-.mouse_dot{
-  width:0.5rem ;
-  height:0.5rem ;
-  background-color: #9b0e0e;
-  position: fixed;
-  animation: mouseDotAnimations 10s infinite linear;
-}
+
 /* these keyframes are to increase the size of the mouse during animation */
 @keyframes mouseDotAnimations{
   0%{
@@ -83,7 +90,7 @@ html{
   }
 }
 
-/* end of mouse dot  */
+
 
 
 /*page background*/
@@ -95,3 +102,101 @@ html{
     background-size: cover;
 }
 /*end of page background*/
+
+/* section_one */
+.section_one{
+  position:relative;
+  width: 100%;
+  height:100vh;
+}
+/* logo */
+.logo{
+  position:absolute; 
+  top:2rem;
+  left:5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+}
+/* end of logo */
+
+/* animated circles */
+
+.circles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+
+}
+
+.circle{
+  width: 15rem;
+  height:15rem;
+  border-radius: 50%;
+  background-color:white;
+  align-self: center;
+  justify-self: center;
+
+}
+
+.circle_one{
+  background: url(images/landing/javascript.jpg) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  border: .7rem double #fff;}
+.circle_two{
+  background: url(images/landing/java.png) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  border: .7rem double #fff;
+}
+.circle_three{
+  background: url(images/landing/python.png) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  border: .7rem double #fff;;
+}
+.circle_four{
+  background: url(images/landing/php.png) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  border: .7rem double #fff;
+}
+.main_circle{
+  width:35rem;
+  height:35rem;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.main_circle img{
+  width:40rem;
+  height:40rem;
+  /* mix-blend-mode: color-dodge; */
+}
+/* end of animated circles */
+/* featured texts */
+.featured_text{
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  width: 0;
+  word-wrap: break-word;
+  line-height: 2.5;
+  position: sticky;
+  top:0;
+}
+.featured_text_one{
+  margin: 0 auto 0 10rem;
+}
+.featured_text_two{
+  margin: 0 10rem 0 auto;
+}
+/* end of featured texts */
+/* end of section_one */
